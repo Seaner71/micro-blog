@@ -22,11 +22,12 @@ get '/' do
 end
 
 get '/feed' do
+  @pageuser = User.find_by_id(session[:user_id])
   erb :feed
 end
 
 get '/profile/:id' do
-  @pageuser = User.find_by_id(params[:id])
+  @pageuser = User.find_by_id(session[:user_id])
   erb :profile
 end
 
