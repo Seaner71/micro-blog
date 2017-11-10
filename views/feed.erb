@@ -1,4 +1,20 @@
 <h1>feed</h1>
 <a href="/logout">log out</a>
 
-<button type="button" name="button"><a href="/profile/<%= @pageuser.id %>">Profile</a></button>
+<button type="button" name="button"><a href="/profile/<%= @pageuser.id %>">Profile</a></button><br><br>
+
+<form action="/posts" method="post">
+  <label>Write something...</label><br>
+  <textarea name="content" rows="10" cols="50" maxlength="150"></textarea>
+  <br>
+
+  <input type="submit" value="Share">
+</form>
+
+
+See the posts:
+<% @posts.reverse_each do |post| %>
+  <div>
+    <p><%= post.content %></p>
+  </div>
+<% end %>
