@@ -54,3 +54,9 @@ post '/posts' do
   message = Post.create(content: params[:content])
   redirect '/feed'
 end
+
+patch '/profile/:id' do
+  user = User.find_by_id(session[:user_id])
+  user.update(username: params[:username])
+  redirect "/profile/#{user.id}"
+end
