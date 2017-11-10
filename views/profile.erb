@@ -1,4 +1,13 @@
 <h1>Profile Page</h1>
+
+<% if current_user%>
+  <a href="/edit">Edit</a>
+<% end %>
+
+<% if current_user%>
+  <p><%= @user.username %></p>
+<% end %>
+
 <a href="/logout">log out</a>
 
 <button type="button" name="button"><a href="/feed">Feed</a></button>

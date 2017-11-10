@@ -8,9 +8,17 @@ enable :sessions
 # Database configuration
 set :database, "sqlite3:development.sqlite3"
 
+def current_user
+  @user ||= User.find_by_id(session[:user_id])
+end
+
 # Define routes below
 get '/' do
-  erb :index
+  if current_user
+    redirect '/feed'
+  else
+    erb :index
+  end
 end
 
 get '/feed' do
@@ -24,6 +32,10 @@ end
 get '/logout' do
   session.clear
   redirect '/'
+end
+
+get '/edit' do
+  erb :edit
 end
 
 post '/login' do

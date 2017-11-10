@@ -4,3 +4,5 @@
 
 # e.g.
 # User.create(f_name: 'Bobby', l_name: 'McBobberson')
+
+user = User.create(username: 'testing')
