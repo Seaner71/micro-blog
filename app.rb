@@ -23,6 +23,8 @@ end
 
 get '/feed' do
   @pageuser = User.find_by_id(session[:user_id])
+  @posts = Post.all
+
   erb :feed
 end
 
@@ -45,4 +47,10 @@ post '/login' do
   user = User.find_or_create_by(username: username)
   session[:user_id] = user.id
   redirect to '/feed'
+end
+
+# creating messages route
+post '/posts' do
+  message = Post.create(content: params[:content])
+  redirect '/feed'
 end
