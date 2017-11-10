@@ -29,7 +29,8 @@ end
 
 get '/profile/:id' do
   @pageuser = User.find_by_id(session[:user_id])
-  @posts = Post.where(user_id: 4)
+  @pageuserid = @pageuser.id
+  @posts = Post.where(user_id: @pageuserid)
   erb :profile
 end
 
