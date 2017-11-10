@@ -55,8 +55,16 @@ post '/posts' do
   redirect '/feed'
 end
 
+# edit a user
 patch '/profile/:id' do
   user = User.find_by_id(session[:user_id])
   user.update(username: params[:username])
   redirect "/profile/#{user.id}"
+end
+
+# delete a user
+delete '/profile/:id' do
+  user = User.find_by_id(params[:id])
+  user.destroy
+  redirect '/'
 end
