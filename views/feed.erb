@@ -3,7 +3,7 @@
 
 <button type="button" name="button"><a href="/profile/<%= @pageuser.id %>">Profile</a></button><br><br>
 
-<form action="/posts" method="post">
+<form action="/posts/<%= @pageuser.id %>" method="post">
   <label>Write something...</label><br>
   <textarea name="content" rows="10" cols="50" maxlength="150"></textarea>
   <br>

@@ -20,3 +20,9 @@ Your username is: <%= current_user.username %>
 <a href="/logout">log out</a>
 
 <button type="button" name="button"><a href="/feed">Feed</a></button>
+
+<% @posts.reverse_each do |post| %>
+  <div>
+    <p><%= post.content %></p>
+  </div>
+<% end %>
