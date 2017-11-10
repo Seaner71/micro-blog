@@ -30,6 +30,7 @@ end
 
 get '/profile/:id' do
   @pageuser = User.find_by_id(session[:user_id])
+  @posts = Post.where(user_id: 4)
   erb :profile
 end
 
@@ -50,8 +51,9 @@ post '/login' do
 end
 
 # creating messages route
-post '/posts' do
-  message = Post.create(content: params[:content])
+post '/posts/:id' do
+  @user = User.find_by_id(session[:user_id])
+  @user.posts.create(content: params[:content])
   redirect '/feed'
 end
 
