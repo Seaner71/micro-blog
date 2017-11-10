@@ -1,10 +1,20 @@
 <h1>Profile Page</h1>
 
-Your user id is: <%= current_user.id %>
-
+Your session id is: <%= current_user.id %>
+<br>
+Your username is: <%= current_user.username %>
 
 <% if @pageuser.id == current_user.id %>
   <a href="/edit">Edit</a>
+
+  <br><br>
+
+
+  <form action="/profile/<%= @user.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Destroy">
+</form>
+
 <% end %>
 
 <a href="/logout">log out</a>
