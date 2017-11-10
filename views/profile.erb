@@ -1,6 +1,6 @@
 <h1>Profile Page</h1>
 
-<% if current_user%>
+<% if @pageuser.id == @user.id%>
   <a href="/edit">Edit</a>
 <% end %>
 

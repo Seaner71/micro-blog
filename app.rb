@@ -26,7 +26,7 @@ get '/feed' do
 end
 
 get '/profile/:id' do
-  @user = User.find_by_id(params[:id])
+  @pageuser = User.find_by_id(params[:id])
   erb :profile
 end
 
