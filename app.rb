@@ -24,7 +24,6 @@ end
 get '/feed' do
   @pageuser = User.find_by_id(session[:user_id])
   @posts = Post.all
-
   erb :feed
 end
 
