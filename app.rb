@@ -17,15 +17,14 @@ get '/feed' do
   erb :feed
 end
 
-# Providing model information to the view
-# requires an instance variable (prefixing with the '@' symbol)
+get '/profile' do
+  erb :profile
+end
 
-# Example 'User' index route
-
-# get '/users' do
-#   @users = User.all
-#   erb :users
-# end
+get '/logout' do
+  session.clear
+  redirect '/'
+end
 
 post '/login' do
   username = params[:username].downcase
