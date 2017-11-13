@@ -44,9 +44,7 @@ get '/edit' do
 end
 
 get '/postsedit/:id' do
-  @pageuser = User.find_by_id(params[:id])
-  @pageuserid = @pageuser.id
-  @posts = Post.where(user_id: @pageuserid)
+  @posts = Post.find_by_id(params[:id])
   erb :postsedit
 end
 
@@ -91,7 +89,7 @@ end
 
 # edit a post
 patch '/postsedit/:id' do
-  @posts = Post.find_by_id(1)
+  @posts = Post.find_by_id(params[:id])
   @posts.update(content: params[:content])
   redirect '/feed'
 end
