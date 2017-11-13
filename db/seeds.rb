@@ -8,3 +8,5 @@
 user = User.create(username: 'testing')
 user = User.create(username: 'nwitte')
 user = User.create(username: 'nmw44')
+user = User.create(username: 'sean')
+user = User.create(username: 'ss71')
