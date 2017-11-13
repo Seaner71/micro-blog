@@ -93,3 +93,10 @@ patch '/postsedit/:id' do
   @posts.update(content: params[:content])
   redirect '/feed'
 end
+
+# delete a user
+delete '/postsedit/:id' do
+  @posts = Post.find_by_id(params[:id])
+  @posts.destroy
+  redirect '/feed'
+end
