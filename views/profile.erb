@@ -1,22 +1,28 @@
 <h1><%= @pageuser.username %>'s Profile Page</h1>
 
-Your session id is: <%= current_user.id %>
-<br>
-Your username is: <%= current_user.username %><br>
-Your friend's username: <%= User.find_by_id(params[:id]).username%>
+<div class="profile-your-info">
+  <% if @pageuser.id == current_user.id %>
+    <button type="button" name="button"><a href="/edit">Edit</a></button>
+    <br><br>
+    <form action="/profile/<%= @user.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Destroy">
+  </form>
 
-<% if @pageuser.id == current_user.id %>
-  <a href="/edit">Edit</a>
+  <% end %>
+  Your session id is: <%= current_user.id %>
+  <br>
+  Your username is: <%= current_user.username %><br>
+  <br>
+</div>
+<div class="profile-friend-info">
+  Your friend's name: <%= User.find_by_id(params[:id]).f_name%><%= User.find_by_id(params[:id]).l_name%>
+  <br>
+  Your friend's username: <%= User.find_by_id(params[:id]).username%>
+  <br>
+  Your friend's email: <%= User.find_by_id(params[:id]).email%>
+</div>
 
-  <br><br>
-
-
-  <form action="/profile/<%= @user.id %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <input type="submit" value="Destroy">
-</form>
-
-<% end %>
 
 <a href="/logout">log out</a>
 
