@@ -165,7 +165,7 @@ h1 {
   width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 0.3sem;
+  grid-column-gap: 0.3em;
   grid-auto-columns: minmax(100px, auto);
 
 }
