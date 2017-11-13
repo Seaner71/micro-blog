@@ -6,3 +6,5 @@
 # User.create(f_name: 'Bobby', l_name: 'McBobberson')
 
 user = User.create(username: 'testing')
+user = User.create(username: 'nwitte')
+user = User.create(username: 'nmw44')
