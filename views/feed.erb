@@ -17,8 +17,7 @@ See the posts:
     <p>Post:</p>
     <p><%= post.content %> </p>
    <% if @pageuser.id == post.user_id %>
-        <%= '<button><a href="/postsedit">Edit</a></button>' %>
-        <%= '<button><a href="/postsedit">Destroy</a></button>'   %>
+        <button><a href="/postsedit/<%=post.id%>">Edit</a></button>
       <% end %>
 
     <p>Posted by: <% post.user_id.nil? ? post.user_id = 4 : post.user_id %> <%= User.find_by_id(post.user_id).username %> </p>
