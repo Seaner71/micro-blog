@@ -65,7 +65,13 @@ end
 # edit a user
 patch '/profile/:id' do
   user = User.find_by_id(session[:user_id])
-  user.update(username: params[:username])
+  user.update(
+    username: params[:username],
+    f_name: params[:f_name],
+    l_name: params[:l_name],
+    email: params[:email]
+  )
+
   redirect "/profile/#{user.id}"
 end
 
