@@ -11,12 +11,11 @@
   <input type="submit" value="Share">
 </form>
 
-
 See the posts:
 <% @posts.reverse_each do |post| %>
   <div>
     <p>Post:</p>
     <p><%= post.content %> </p>
-    <p>Posted by:<%= post.user_id %></p>
+    <p>Posted by: <% post.user_id.nil? ? post.user_id = 4 : post.user_id %> <%= User.find_by_id(post.user_id).username %> </p>
   </div>
 <% end %>
