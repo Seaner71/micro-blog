@@ -13,7 +13,7 @@
 
 See the posts:
 <% @posts.reverse_each do |post| %>
-  <div>
+  <div class = "post-box">
     <p>Post:</p>
     <p><%= post.content %> </p>
    <% if @pageuser.id == post.user_id %>
