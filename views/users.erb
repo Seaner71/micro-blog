@@ -1,0 +1,11 @@
+<div class="friendpage">
+
+<p>Find a friend!</p>
+<article>
+  <% @users.each do |user| %>
+    <a href="/profile/<%= user.id %>"><%= user.username %></a>
+  <% end %>
+</article>
+</div>
+
+<button type="button" name="button"><a href="/feed">Feed</a></button>

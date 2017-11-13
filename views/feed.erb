@@ -19,3 +19,5 @@ See the posts:
     <p>Posted by: <% post.user_id.nil? ? post.user_id = 4 : post.user_id %> <%= User.find_by_id(post.user_id).username %> </p>
   </div>
 <% end %>
+
+<a href="/users">Friend Page</a>

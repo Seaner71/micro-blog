@@ -43,6 +43,11 @@ get '/edit' do
   erb :edit
 end
 
+get '/users' do
+  @users = User.all
+  erb :users
+end
+
 post '/login' do
   username = params[:username].downcase
   user = User.find_or_create_by(username: username)
