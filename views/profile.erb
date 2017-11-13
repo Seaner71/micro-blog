@@ -29,7 +29,7 @@
 <button type="button" name="button"><a href="/feed">Feed</a></button>
 
 <% @posts.reverse_each do |post| %>
-  <div class"post-box">
+  <div class="post-box">
     <p><%= post.content %></p>
     <p>Posted on: <%= (post.created_at).localtime.strftime("%B %d, %Y %I:%M:%S %p") %>
     <% if @pageuser.id == current_user.id %>
