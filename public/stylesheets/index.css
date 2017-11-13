@@ -35,3 +35,34 @@ h1 {
   font-weight: bold;
   color: #000000;
 }
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0.3em;
+  grid-auto-columns: minmax(100px, auto);
+
+}
+
+.nav-bar a {
+  display: block;
+  color: yellow;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-bar li a:hover {
+  background-color: green;
+  color: white;
+}
+
+.nav-bar li a:active {
+  background-color: red;
+}
