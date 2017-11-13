@@ -2,7 +2,8 @@
 
 Your session id is: <%= current_user.id %>
 <br>
-Your username is: <%= current_user.username %>
+Your username is: <%= current_user.username %><br>
+Your friend's username: <%= User.find_by_id(params[:id]).username%>
 
 <% if @pageuser.id == current_user.id %>
   <a href="/edit">Edit</a>
