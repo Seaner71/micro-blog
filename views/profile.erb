@@ -1,15 +1,6 @@
 <h1><%= @pageuser.username %>'s Profile Page</h1>
 
 <div class="profile-your-info">
-  <% if @pageuser.id == current_user.id %>
-    <button type="button" name="button"><a href="/edit">Edit</a></button>
-    <br><br>
-    <form action="/profile/<%= @user.id %>" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Destroy">
-  </form>
-
-  <% end %>
   Your session id is: <%= current_user.id %>
   <br>
   Your username is: <%= current_user.username %><br>
@@ -23,21 +14,16 @@
   Your friend's email: <%= User.find_by_id(params[:id]).email%>
 </div>
 
-
-<a href="/logout">log out</a>
-
-<button type="button" name="button"><a href="/feed">Feed</a></button>
-
-<% @posts.reverse_each do |post| %>
-  <div class="post-box">
-    <p><%= post.content %></p>
-    <p>Posted on: <%= (post.created_at).localtime.strftime("%B %d, %Y %I:%M:%S %p") %>
-    <% if @pageuser.id == current_user.id %>
-      <button type="button" name="button"><a href="/postsedit/<%=post.id%>">Edit</a></button>
-      <br><br>
-    </form>
-    <% end %>
-  </div>
-<% end %>
-
-<a href="/users">Friend Page</a>
+<div class="post-box-container">
+  <% @posts.reverse_each do |post| %>
+    <div class="post-box">
+      <p><%= post.content %></p>
+      <p>Posted on: <%= (post.created_at).localtime.strftime("%B %d, %Y %I:%M:%S %p") %>
+      <% if @pageuser.id == current_user.id %>
+        <a href="/postsedit/<%=post.id%>">Edit</a>
+      </form>
+      <% end %>
+    </div>
+    <br>
+  <% end %>
+</div>
