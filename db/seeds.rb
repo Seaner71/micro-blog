@@ -4,6 +4,7 @@
 
 # e.g.
 # User.create(f_name: 'Bobby', l_name: 'McBobberson')
+User.destroy_all
 
 user = User.create(username: 'testing')
 user = User.create(username: 'nwitte')
