@@ -43,7 +43,10 @@ get '/edit' do
   erb :edit
 end
 
-get '/postsedit' do
+get '/postsedit/:id' do
+  @pageuser = User.find_by_id(params[:id])
+  @pageuserid = @pageuser.id
+  @posts = Post.where(user_id: @pageuserid)
   erb :postsedit
 end
 
@@ -87,8 +90,8 @@ delete '/profile/:id' do
 end
 
 # edit a post
-patch '/posts/:id' do
-  @user = User.find_by_id(session[:user_id])
-  @user.posts.update(content: params[:content])
-  redirect "/profile/#{user.id}"
+patch '/postsedit/:id' do
+  @posts = Post.find_by_id(1)
+  @posts.update(content: params[:content])
+  redirect '/feed'
 end
