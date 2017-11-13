@@ -6,3 +6,11 @@
   <br>
   <input type="submit" value="Update">
 </form>
+
+<br><br>
+
+<form action="/postsedit/<%= @posts.id %>" method="post">
+<input type="hidden" name="_method" value="delete">
+<input type="submit" value="Destroy">
+
+</form>
