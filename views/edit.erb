@@ -4,19 +4,19 @@
   <input type="hidden" name="_method" value="patch">
   <label for="name">Username</label>
   <br>
-  <input type="text" name="username" placeholder="<%= current_user.username %>"><br>
+  <input type="text" name="username" value="<%= current_user.username %>"><br>
   <br>
   <label for="f_name">First Name</label>
   <br>
-  <input type="text" name="f_name" placeholder="First Name"><br>
+  <input type="text" name="f_name" value="<%= current_user.f_name%>"><br>
   <br>
   <label for="l_name">Last Name</label>
   <br>
-  <input type="text" name="l_name" placeholder="Last Name"><br>
+  <input type="text" name="l_name" value="<%= current_user.l_name%>"><br>
   <br>
   <label for="name">Email</label>
   <br>
-  <input type="email" name="email" placeholder="Email Address"><br>
+  <input type="email" name="email" value="<%= current_user.email%>"><br>
   <br>
   <input type="submit" value="Update">
 </form>
