@@ -10,5 +10,5 @@ user = User.create(username: 'nwitte', f_name: 'Nikki', l_name: 'Witte', email: 
 user = User.create(username: 'nmp4', f_name: 'Natalie', l_name: "Portman", email: 'natport@gmail.com')
 user = User.create(username: 'sean')
 user = User.create(username: 'ss71')
-user = User.create(username: 'natalietate')
-user = User.create(username: 'natalie')
+user = User.create(username: 'clooney', f_name: 'George', l_name: 'Clooney', email: 'georgec@gmail.com')
+user = User.create(username: 'natalie', f_name: 'Natalie', l_name: 'Russo', email: 'martin.nat@gmail.com')
