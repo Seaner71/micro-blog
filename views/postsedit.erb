@@ -1,8 +1,8 @@
-<form action="/postsedit/:id" method="post">
+<form action="/postsedit/<%=@posts.id%>" method="post">
   <input type="hidden" name="_method" value="patch">
   <label>Update your post...</label>
   <br>
-  <textarea name="content" rows="10" cols="50" maxlength="150" value=""></textarea><br>
+  <textarea name="content" rows="10" cols="50" maxlength="150"><%=@posts.content%></textarea><br>
   <br>
   <input type="submit" value="Update">
 </form>
