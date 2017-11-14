@@ -6,11 +6,14 @@
   <% end %>
 </div>
 <div class="profile-friend-info">
-  Your friend's name: <%= User.find_by_id(params[:id]).f_name%> <%= User.find_by_id(params[:id]).l_name%>
   <br>
-  Your friend's username: <%= User.find_by_id(params[:id]).username%>
+  Name: <%= User.find_by_id(params[:id]).f_name%> <%= User.find_by_id(params[:id]).l_name%>
   <br>
-  Your friend's email: <%= User.find_by_id(params[:id]).email%>
+  <br>
+  Username: <%= User.find_by_id(params[:id]).username%>
+  <br>
+  <br>
+  Email: <%= User.find_by_id(params[:id]).email%>
 </div>
 
   <div class="post-box-container">
