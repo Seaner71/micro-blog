@@ -1,9 +1,9 @@
 <h1><%= @pageuser.username %>'s Profile Page</h1>
 
 <div class="profile-your-info">
-  Your session id is: <%= current_user.id %>
-  <br>
-  Your username is: <%= current_user.username %><br>
+  <% if @pageuser.id == current_user.id %>
+    <a href="/edit"><small>Edit Profile</small></a>
+  <% end %>
   <br>
 </div>
 <div class="profile-friend-info">
