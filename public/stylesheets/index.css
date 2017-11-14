@@ -66,3 +66,7 @@ h1 {
 .nav-bar a.active {
   background-color: red;
 }
+
+.welcome {
+  color: white;
+}
