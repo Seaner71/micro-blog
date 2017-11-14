@@ -20,3 +20,9 @@
   <br>
   <input type="submit" value="Update">
 </form>
+
+</form>
+  <form action="/profile/<%= current_user.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete Your Account">
+</form>

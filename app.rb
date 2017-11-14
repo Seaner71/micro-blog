@@ -103,7 +103,7 @@ patch '/postsedit/:id' do
   redirect '/feed'
 end
 
-# delete a user
+# delete a post
 delete '/postsedit/:id' do
   @posts = Post.find_by_id(params[:id])
   @posts.destroy

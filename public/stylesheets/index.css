@@ -23,7 +23,7 @@ h1 {
 
 .text-class{
   color: white;
-  font-size: 1.3em;
+  font-size: 1.2em;
   letter-spacing: 2px;
 }
 
@@ -145,7 +145,7 @@ input[type=text]:focus, input[type=email]:focus, .post-content:focus {
 
 }
 
-form {
+.nice-form {
   margin: 0 auto;
   text-align: center;
   padding: 60px 50px 60px 50px;
