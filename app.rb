@@ -12,6 +12,10 @@ def current_user
   @user ||= User.find_by_id(session[:user_id])
 end
 
+def authenticate_user
+  redirect '/' if current_user.nil?
+end
+
 # Define routes below
 get '/' do
   if current_user
@@ -22,12 +26,14 @@ get '/' do
 end
 
 get '/feed' do
+  authenticate_user
   @pageuser = User.find_by_id(session[:user_id])
   @posts = Post.all
   erb :feed
 end
 
 get '/profile/:id' do
+  authenticate_user
   @pageuser = User.find_by_id(params[:id])
   @pageuserid = @pageuser.id
   @posts = Post.where(user_id: @pageuserid)
@@ -40,15 +46,18 @@ get '/logout' do
 end
 
 get '/edit' do
+  authenticate_user
   erb :edit
 end
 
 get '/postsedit/:id' do
+  authenticate_user
   @posts = Post.find_by_id(params[:id])
   erb :postsedit
 end
 
 get '/users' do
+  authenticate_user
   @users = User.all
   erb :users
 end
