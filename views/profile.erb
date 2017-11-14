@@ -2,9 +2,8 @@
 
 <div class="profile-your-info">
   <% if @pageuser.id == current_user.id %>
-    <a href="/edit"><small>Edit Profile</small></a>
+    <a href="/edit/<%= @pageuser.id %>"><small>Edit Profile</small></a>
   <% end %>
-  <br>
 </div>
 <div class="profile-friend-info">
   Your friend's name: <%= User.find_by_id(params[:id]).f_name%> <%= User.find_by_id(params[:id]).l_name%>
