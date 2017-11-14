@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  /*background-color: rgba(0, 0, 0, 0.1);*/
 }
 
 body {
@@ -20,10 +19,6 @@ h1 {
   padding: 20px;
   padding-left: 300px;
   padding-right: 300px;
-}
-
-.right{
-  float: right;
 }
 
 .text-class{
@@ -111,11 +106,6 @@ input[type=text]:focus, input[type=email]:focus, .post-content:focus {
   background-color: #f9e195;
 }
 
-.post-content{
-  width: 80%;
-}
-
-
 /*Friends page styling*/
 
 .friend-grid {
@@ -153,4 +143,14 @@ input[type=text]:focus, input[type=email]:focus, .post-content:focus {
     grid-template-columns: 100%;
   }
 
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+  padding: 60px 50px 60px 50px;
+}
+
+.post-content {
+    width: 80%;
 }
