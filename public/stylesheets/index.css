@@ -71,3 +71,22 @@ h1 {
 .welcome {
   color: white;
 }
+
+/* Form Styling - log in, edit profile, post, etc. */
+
+form {
+  padding: 20px 10px 20px 10px;
+}
+
+input[type=text], input[type=email], .post-content {
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #F5C020;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type=text]:focus, input[type=email]:focus, .post-content:focus {
+  background-color: #f9e195;
+}
