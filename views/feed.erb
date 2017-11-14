@@ -2,9 +2,9 @@
 
 <form action="/posts/<%= @pageuser.id %>" method="post">
   <label>Write something...</label><br>
-  <textarea name="content" rows="10" cols="50" maxlength="150"></textarea>
+  <textarea name="content" rows="10" cols="50" maxlength="150" onkeyup="calcChars(this)"></textarea>
   <br>
-
+  <div><span class="postcount">150</span> Characters left</div>
   <input type="submit" value="Share">
 </form>
 
