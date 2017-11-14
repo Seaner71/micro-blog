@@ -4,3 +4,16 @@ var calcChars = function (element) {
    var remaining = maxlength - chars;
  document.querySelector(".postcount").innerHTML = remaining;
 };
+
+
+var i = 0;
+var txt = 'Welcome to Chirper!';
+var speed = 40;
+
+window.onload = function typeWriter() {
+  if (i < txt.length) {
+    document.querySelector(".welcome").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
