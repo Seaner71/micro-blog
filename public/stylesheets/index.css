@@ -22,6 +22,12 @@ h1 {
   padding-right: 300px;
 }
 
+.profile-friend-info{
+  color: white;
+  font-size: 1.3em;
+  letter-spacing: 2px;
+}
+
 .post-box {
   text-align: center;
   opacity: .6;
