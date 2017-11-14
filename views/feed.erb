@@ -6,7 +6,10 @@
 </form>
 </div>
 
-<% for i in 1..10 do %>
+
+<% lastpost = (@posts.last.id) %>
+<% lastpost_minus = (@posts.last.id)-10%>
+<% (lastpost).downto(lastpost_minus).each do |i| %>
   <div class="post-box">
       <br>
     <p><%= @posts.find_by_id(i).content %> </p>
