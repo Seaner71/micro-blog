@@ -1,11 +1,8 @@
-<div class="friendpage">
-
-<p>Find a friend!</p>
-<article>
-  <% @users.each do |user| %>
-    <a href="/profile/<%= user.id %>"><%= user.username %></a>
-  <% end %>
-</article>
+<h1>Find a friend!</h1>
+<div class="friend-grid">
+    <% @users.each do |user| %>
+      <article class="friend-card">
+      <a class="friend-link" href="/profile/<%= user.id %>"><%= user.username %></a>
+    </article>
+    <% end %>
 </div>
-
-<button type="button" name="button"><a href="/feed">Feed</a></button>
