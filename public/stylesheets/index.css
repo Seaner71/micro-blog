@@ -73,7 +73,7 @@ h1 {
 }
 
 .nav-bar a.active {
-  background-color: red;
+  font-size: 1.5em;
 }
 
 .welcome {
