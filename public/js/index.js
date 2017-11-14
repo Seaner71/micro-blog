@@ -7,8 +7,8 @@ var calcChars = function (element) {
 
 
 var i = 0;
-var txt = 'Welcome to Chirper!';
-var speed = 40;
+var txt = 'Welcome to Chirper !';
+var speed = 70;
 
 window.onload = function typeWriter() {
   if (i < txt.length) {
