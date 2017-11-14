@@ -2,8 +2,9 @@
   <input type="hidden" name="_method" value="patch">
   <label>Update your post...</label>
   <br>
-  <textarea name="content" rows="10" cols="50" maxlength="150"><%=@posts.content%></textarea><br>
+  <textarea name="content" rows="10" cols="50" maxlength="150" onkeyup="calcChars(this)"><%=@posts.content%></textarea><br>
   <br>
+    <div><span class="postcount">150</span> Characters left</div>
   <input type="submit" value="Update">
 </form>
 
