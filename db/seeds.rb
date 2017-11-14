@@ -6,6 +6,8 @@
 # User.create(f_name: 'Bobby', l_name: 'McBobberson')
 User.destroy_all
 
+require 'faker'
+
 user = User.create(username: 'nwitte', f_name: 'Nikki', l_name: 'Witte', email: 'nwitte@gmail.com')
 user = User.create(username: 'nmp4', f_name: 'Natalie', l_name: "Portman", email: 'natport@gmail.com')
 user = User.create(username: 'sean', f_name: 'Sean', l_name: "Smyth", email: 'ssmyth1071@gmail.com')
