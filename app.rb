@@ -63,7 +63,7 @@ get '/users' do
 end
 
 post '/login' do
-  username = params[:username].downcase
+  username = params[:username]
   user = User.find_or_create_by(username: username)
   session[:user_id] = user.id
   redirect to '/feed'
