@@ -5,6 +5,7 @@
     <a href="/edit"><small>Edit Profile</small></a>
   <% end %>
 </div>
+
 <div class="text-class">
   <br>
   Name: <%= User.find_by_id(params[:id]).f_name%> <%= User.find_by_id(params[:id]).l_name%>
@@ -16,7 +17,7 @@
   Email: <%= User.find_by_id(params[:id]).email%>
 </div>
 
-  <div class="post-box-container">
+<div class="post-box-container">
   <% @posts.reverse_each do |post| %>
   <div class="post-box">
       <p class="test content"> <%= post.content %></p>

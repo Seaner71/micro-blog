@@ -1,8 +1,12 @@
+<div class="nice-form">
 <form class="text-class" action="/posts/<%= @pageuser.id %>" method="post">
   <label>Write something...</label><br>
   <textarea class="post-content" name="content" rows="10" cols="50" maxlength="150" onkeyup="calcChars(this)"></textarea>
   <div class="form-submit"><span><small><b>150</b></small></span><small> characters left</small><br><input type="submit" value="Share"></div>
 </form>
+</div>
+
+
 <% lastpost = (@posts.last.id) %>
 <% lastpost_minus = (@posts.last.id)-10%>
 <% (lastpost).downto(lastpost_minus).each do |i| %>
