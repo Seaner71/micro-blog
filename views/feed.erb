@@ -1,7 +1,7 @@
 <form class="text-class nice-form" action="/posts/<%= @pageuser.id %>" method="post">
   <label>Write something...</label><br>
   <textarea class="post-content" name="content" rows="10" cols="50" maxlength="150" onkeyup="calcChars(this)"></textarea>
-  <div class="form-submit"><span><small><b>150</b></small></span><small> characters left</small><br><input type="submit" value="Share"></div>
+  <div class="form-submit"><span class="postcount"><small><b>150</b></small></span><small> characters left</small><br><input type="submit" value="Share"></div>
 </form>
 <% lastpost = (@posts.last.id) %>
 <% lastpost_minus = (@posts.last.id)-10%>
