@@ -14,5 +14,11 @@ gem 'faker'
 # active record dependencies
 gem 'activerecord'
 gem 'sinatra-activerecord'
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 gem 'rake'

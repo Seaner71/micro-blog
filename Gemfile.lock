@@ -23,6 +23,7 @@ GEM
     minitest (5.10.3)
     multi_json (1.12.2)
     mustermann (1.0.1)
+    pg (0.21.0)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -71,6 +72,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   faker
+  pg
   rack
   rack-test
   rake
@@ -81,4 +83,4 @@ DEPENDENCIES
   sqlite3
 
 BUNDLED WITH
-   1.15.4
+   1.16.0
