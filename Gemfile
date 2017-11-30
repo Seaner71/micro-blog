@@ -4,6 +4,16 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
+
+
+
 gem 'sinatra'
 gem 'sinatra-reloader'
 gem 'rspec'
@@ -14,11 +24,5 @@ gem 'faker'
 # active record dependencies
 gem 'activerecord'
 gem 'sinatra-activerecord'
-group :development, :test do
-  gem 'sqlite3'
-end
 
-group :production do
-  gem 'pg'
-end
 gem 'rake'
